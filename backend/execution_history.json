@@ -1,0 +1,9 @@
+[
+  {
+    "database": "mysql",
+    "db_name": "college_egtest",
+    "sql": "CREATE TABLE `student` (\n  name VARCHAR(255),\n  rollno VARCHAR(255),\n  address VARCHAR(255),\n  email VARCHAR(255)\n);",
+    "operation": "CREATE",
+    "time": "2025-12-19T20:30:23.001541"
+  }
+]

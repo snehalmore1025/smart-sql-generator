@@ -1,0 +1,12 @@
+{
+  "name": "smartsqlgenerator_sem1proj",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  "frontend": "cd frontend && npm run dev",
+  "backend": "cd backend && .venv\\Scripts\\python app.py"
+},
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

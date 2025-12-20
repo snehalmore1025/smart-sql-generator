@@ -1,0 +1,260 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== HISTORY PANEL ===== */
+.history {
+  width: 260px;
+  background: #020617;
+  border-right: 1px solid #1e293b;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.history h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.history button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.history div {
+  margin-top: 10px;
+}
+
+.history div div {
+  padding: 10px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.history div div:hover {
+  background: #020617;
+  border-color: #38bdf8;
+}
+
+/* ===== HISTORY IMPROVEMENT ===== */
+
+.history-item {
+  margin-top: 12px;
+  padding: 12px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.history-item:hover {
+  border-color: #38bdf8;
+  background: #020617;
+}
+
+.history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.history-type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.history-table {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.history-sql {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+/* ===== MAIN APP ===== */
+.app {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+.app h1 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===== INPUTS ===== */
+textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  resize: vertical;
+  margin-bottom: 12px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  margin-right: 10px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Primary */
+button {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* ===== CODE / SQL BOX ===== */
+pre {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #020617;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #93c5fd;
+  border-bottom: 1px solid #334155;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #1e293b;
+}
+
+td input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  padding: 6px;
+}
+
+td input:focus {
+  outline: none;
+  background: #020617;
+}
+
+/* ===== INSERT ACTION BUTTONS ===== */
+td button {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  margin-right: 5px;
+}
+
+td button:nth-child(1) {
+  background: #22c55e;
+  color: #020617;
+}
+
+td button:nth-child(2) {
+  background: #ef4444;
+  color: white;
+}
+
+td button:nth-child(3) {
+  background: #f97316;
+  color: white;
+}
+
+/* ===== SECTION SPACING ===== */
+section {
+  margin-top: 30px;
+}
+
+/* ===== VIEW DATA SECTION ===== */
+h3 {
+  margin-top: 30px;
+  color: #93c5fd;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
