@@ -5,24 +5,28 @@ from rules import is_primary_key_candidate, infer_type_from_name
 def infer_type(col_text: str, col_name: str):
     t = col_text.lower()
 
-    # 1. Explicit type mentioned by user (highest priority)
+    # Detect length like "30" or "15 characters"
+    m = re.search(r"(\d+)", t)
+    length = m.group(1) if m else None
+
     if "int" in t:
         return "INT"
+
     if "decimal" in t:
         return "DECIMAL(10,2)"
+
     if "date" in t:
         return "DATE"
-    if "varchar" in t:
-        return "VARCHAR(255)"
 
-    # 2. Infer from column name
+    if length:
+        return f"VARCHAR({length})"
+
     return infer_type_from_name(col_name)
 
 
 def parse_prompt(prompt: str):
     prompt = prompt.strip().lower()
 
-    # ---------------- CREATE ----------------
     if prompt.startswith("create"):
         table = re.search(r"table\s+(\w+)", prompt).group(1)
         cols_part = prompt.split("with", 1)[1]
@@ -39,7 +43,8 @@ def parse_prompt(prompt: str):
                 "Type": infer_type(col, name),
                 "Null": "NO" if pk else "YES",
                 "Key": "PRI" if pk else "",
-                "Extra": "AUTO_INCREMENT" if pk else ""
+                # ❗ auto increment not forced
+                "Extra": ""
             })
 
         sql = build_create_sql(table, schema)
@@ -52,7 +57,6 @@ def parse_prompt(prompt: str):
             "sql": sql
         }
 
-    # ---------------- OTHER ----------------
     return {
         "success": True,
         "operation": "RAW",
@@ -62,6 +66,7 @@ def parse_prompt(prompt: str):
 
 def build_create_sql(table, schema):
     lines = []
+
     for c in schema:
         line = f"{c['Field']} {c['Type']}"
 

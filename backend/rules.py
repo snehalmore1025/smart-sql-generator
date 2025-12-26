@@ -6,6 +6,9 @@ def is_primary_key_candidate(column_name: str) -> bool:
         or name.endswith("_id")
         or name.startswith("id_")
         or name.endswith("no")
+        or name.endswith("_no")
+        or name.endswith("code")
+        or name.endswith("_code")
     )
 
 

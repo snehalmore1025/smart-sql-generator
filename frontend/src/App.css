@@ -258,3 +258,173 @@ h3 {
   background: #334155;
   border-radius: 10px;
 }
+/* ===== EDITABLE TABLE STRUCTURE (STRONG VISIBILITY) ===== */
+
+.desc-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.desc-table thead th {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  color: #ffffff;
+  padding: 14px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.desc-table tbody tr {
+  background: #020617;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.desc-table td {
+  padding: 14px;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* ===== INPUT FIELDS ===== */
+.desc-table input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.desc-table input::placeholder {
+  color: #64748b;
+}
+
+.desc-table input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+}
+
+/* ===== DROPDOWNS (FIXED VISIBILITY) ===== */
+.desc-table select {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background-color: #020617;
+  color: #ffffff;
+  font-size: 0.9rem;
+  appearance: none;
+  cursor: pointer;
+
+  /* custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%2338bdf8' viewBox='0 0 20 20'%3E%3Cpath d='M5.25 7.5L10 12.25 14.75 7.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.desc-table select:hover {
+  border-color: #38bdf8;
+}
+
+.desc-table select:focus {
+  outline: none;
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34,211,238,0.25);
+}
+
+/* ===== ROW HOVER EFFECT ===== */
+.desc-table tbody tr:hover {
+  transform: scale(1.01);
+  transition: all 0.15s ease;
+}
+
+/* ===== SECTION TITLE ===== */
+.card h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #93c5fd;
+  border-left: 4px solid #38bdf8;
+  padding-left: 12px;
+}
+/* ===== INSERT SECTION CARD ===== */
+.insert-card {
+  background: linear-gradient(180deg, #020617, #020617cc);
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* ===== INSERT TABLE ===== */
+.insert-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.insert-table thead th {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  color: #fff;
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+.insert-table tbody tr {
+  background: #020617;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.insert-table td {
+  padding: 14px;
+}
+
+/* ===== INSERT INPUTS ===== */
+.insert-table input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.insert-table input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.action-update {
+  background: #22c55e;
+  color: #020617;
+}
+
+.action-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.action-remove {
+  background: #f97316;
+  color: white;
+}
+
+/* ===== INSERT CONTROLS ===== */
+.insert-controls {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
